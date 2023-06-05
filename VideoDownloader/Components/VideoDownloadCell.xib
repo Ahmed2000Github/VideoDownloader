@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoDownloadCell" customModule="VideoDownloader" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="VideoDownloadCell" customModule="VideoDownloader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="482" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="482" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpc-J0-5iS">
+                        <rect key="frame" x="5" y="5" width="472" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.bing.com/search?q=ios+app+icon+generator&amp;cvid=a952c3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-c8-OYx">
+                                <rect key="frame" x="10" y="10" width="307" height="60"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" name="primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLE-Lh-C3C">
+                                <rect key="frame" x="322" y="10" width="140" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="vxB-aB-hIK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icloud.and.arrow.down.fill" catalog="system" title=" Download">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseBackgroundColor" name="primary"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="downloadAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KNW-hD-lc2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="accent"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TLE-Lh-C3C" secondAttribute="trailing" constant="10" id="K3E-xJ-LB4"/>
+                            <constraint firstAttribute="bottom" secondItem="bIY-c8-OYx" secondAttribute="bottom" constant="10" id="Thb-50-net"/>
+                            <constraint firstItem="TLE-Lh-C3C" firstAttribute="leading" secondItem="bIY-c8-OYx" secondAttribute="trailing" constant="5" id="TvP-ke-Wvw"/>
+                            <constraint firstItem="TLE-Lh-C3C" firstAttribute="top" secondItem="cpc-J0-5iS" secondAttribute="top" constant="10" id="diP-GB-d7Q"/>
+                            <constraint firstItem="bIY-c8-OYx" firstAttribute="leading" secondItem="cpc-J0-5iS" secondAttribute="leading" constant="10" id="hSR-gA-jpy"/>
+                            <constraint firstAttribute="bottom" secondItem="TLE-Lh-C3C" secondAttribute="bottom" constant="10" id="whb-g5-dtY"/>
+                            <constraint firstItem="bIY-c8-OYx" firstAttribute="top" secondItem="cpc-J0-5iS" secondAttribute="top" constant="10" id="zR4-Tx-2L5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cpc-J0-5iS" secondAttribute="bottom" constant="5" id="CxB-Qh-134"/>
+                    <constraint firstItem="cpc-J0-5iS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="FN5-oG-ODE"/>
+                    <constraint firstAttribute="trailing" secondItem="cpc-J0-5iS" secondAttribute="trailing" constant="5" id="Ip6-Zd-zIA"/>
+                    <constraint firstItem="cpc-J0-5iS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Sih-Xn-yBE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="accent"/>
+            <connections>
+                <outlet property="videoUrlLabel" destination="bIY-c8-OYx" id="5wh-6c-PCK"/>
+            </connections>
+            <point key="canvasLocation" x="-132.82442748091603" y="31.690140845070424"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icloud.and.arrow.down.fill" catalog="system" width="128" height="111"/>
+        <namedColor name="accent">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.20200000703334808" green="0.39399999380111694" blue="0.85199999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
