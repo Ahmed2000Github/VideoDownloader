@@ -12,9 +12,11 @@ class VideoDownloadCell: UITableViewCell {
     static let identifier = "VideoDownloadCellID"
 
     @IBOutlet weak var videoUrlLabel: UILabel!
+    
+    var uiNavigationController: UINavigationController?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,7 +30,9 @@ class VideoDownloadCell: UITableViewCell {
     }
     
     @IBAction func downloadAction(_ sender: Any) {
-        print("do something ... ")
+        let vc = VideoViewController(nibName: "VideoViewController", bundle: nil)
+        vc.urlString = videoUrlLabel.text ?? ""
+        uiNavigationController?.pushViewController(vc, animated: true)
     }
     
 }

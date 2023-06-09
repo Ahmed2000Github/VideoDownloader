@@ -41,13 +41,14 @@ class DownloadProgressBar:UIView{
         loadedShape.strokeEnd = 0.0
         loadedShape.lineCap = .round
         progressLabel.text = "Totat\n 0%"
-        progressLabel.font = UIFont.systemFont(ofSize: 20)
+//        progressLabel.font = UIFont.systemFont(ofSize: 20)
         remainShape.path = circularPath.cgPath
         remainShape.fillColor = UIColor.clear.cgColor
         remainShape.strokeColor = UIColor(named: "accent")?.withAlphaComponent(0.8).cgColor
         remainShape.lineWidth = 20
         remainShape.lineCap = .round
         remainShape.shadowOpacity = 0.6
+        remainShape.shadowColor = UIColor(named: "accent")?.cgColor
         self.layer.addSublayer(remainShape)
         self.layer.addSublayer(loadedShape)
         self.layer.addSublayer(loadedShape)

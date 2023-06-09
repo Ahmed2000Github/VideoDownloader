@@ -34,8 +34,13 @@ class HomeViewController: UIViewController {
             searchTableResult.isHidden = true
             errorResult.isHidden = true
             noDataFoundResult.isHidden = true
+            guard let urlString = searchTextField.text, let _ = URL(string: urlString) else{
+                errorResult.isHidden = false
+                print("url string not valid")
+                return
+            }
             do{
-               videos = try await presenter.fetchFoundVideo(params: SearchFormViewModel(url: ""))
+                videos = try await presenter.fetchFoundVideo(params: SearchFormViewModel(url:urlString ))
                 if videos.count == 0 {
                     noDataFoundResult.isHidden = false
                 } else {
@@ -58,6 +63,7 @@ extension HomeViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchTableResult.dequeueReusableCell(withIdentifier: VideoDownloadCell.identifier, for: indexPath) as! VideoDownloadCell
+        cell.uiNavigationController = self.navigationController
         cell.update(viewModel: videos[indexPath.row])
         return cell
     }

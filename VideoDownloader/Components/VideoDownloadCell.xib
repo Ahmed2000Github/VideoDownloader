@@ -21,18 +21,18 @@
                         <rect key="frame" x="5" y="5" width="472" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.bing.com/search?q=ios+app+icon+generator&amp;cvid=a952c3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIY-c8-OYx">
-                                <rect key="frame" x="10" y="10" width="307" height="60"/>
+                                <rect key="frame" x="10" y="10" width="387" height="60"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" name="primary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLE-Lh-C3C">
-                                <rect key="frame" x="322" y="10" width="140" height="60"/>
+                                <rect key="frame" x="402" y="10" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="vxB-aB-hIK"/>
+                                    <constraint firstAttribute="width" constant="60" id="vxB-aB-hIK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="icloud.and.arrow.down.fill" catalog="system" title=" Download">
+                                <buttonConfiguration key="configuration" style="filled" image="icloud.and.arrow.down.fill" catalog="system" title="">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
                                     <color key="baseBackgroundColor" name="primary"/>
                                 </buttonConfiguration>

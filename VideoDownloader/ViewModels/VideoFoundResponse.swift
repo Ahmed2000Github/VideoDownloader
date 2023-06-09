@@ -9,4 +9,10 @@ import Foundation
 
 struct VideoFoundResponse{
     let url: String;
+    let isYoutubeVideo:Bool
+    
+    init(url: String, isYoutubeVideo: Bool = false) {
+        self.url = url
+        self.isYoutubeVideo = isYoutubeVideo
+    }
 }
