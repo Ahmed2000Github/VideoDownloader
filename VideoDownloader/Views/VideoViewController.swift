@@ -31,7 +31,6 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var infoRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var infoBar: UIView!
     @IBOutlet weak var infoLabel: UILabel!
-    
     @IBOutlet weak var qualitySelectorHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectedQualityLabel: UILabel!
     @IBOutlet weak var qualityTable: UITableView!
@@ -112,27 +111,30 @@ class VideoViewController: UIViewController {
     
     
    @IBAction func downloadAction(_ sender: Any) {
-        
-        UIView.animate(withDuration: 1){ [self] in
-            self.cancelButtonBottomConstraint.constant = 30
-            self.cancelCardLabel.text = "Downloading file in progress ... "
-            self.view.layoutIfNeeded()
-        }
-        if let url = URL(string: urlString){
-            fileDownloader.isVideoType = isVideoType
-            if fileDownloader.hasResumedData{
-                do{
-                    let resumedData = try Data(contentsOf: fileDownloader.getFileURL())
-                    fileDownloader.downloadFile(from: url,resumedData: resumedData)
-                }catch{
-                    displayMessageInfo(message: "Error occured when retrieving old data.")
-                }
-            }else{
-                fileDownloader.downloadFile(from: url)
-            }
-        }
+       self.downloadButton.setTitle("Download", for: .normal)
+       if  self.cancelButtonBottomConstraint.constant != 30{
+           UIView.animate(withDuration: 1){ [self] in
+               self.cancelButtonBottomConstraint.constant = 30
+               self.cancelCardLabel.text = "Downloading file in progress ... "
+               self.view.layoutIfNeeded()
+           }
+           if let url = URL(string: urlString){
+               fileDownloader.isVideoType = isVideoType
+               if fileDownloader.hasResumedData{
+                   do{
+                       let resumedData = try Data(contentsOf: fileDownloader.getFileURL())
+                       fileDownloader.downloadFile(from: url,resumedData: resumedData)
+                   }catch{
+                       displayMessageInfo(message: "Error occured when retrieving old data.")
+                   }
+               }else{
+                   fileDownloader.downloadFile(from: url)
+               }
+           }
+       }
     }
     @IBAction func cancelAction(_ sender: Any) {
+        self.downloadButton.setTitle("Try again", for: .normal)
         fileDownloader.downloadTask?.cancel()
         fileDownloader.hasResumedData = false
     }
@@ -249,7 +251,7 @@ extension VideoViewController: DownloadProgressDelegate{
                 loadingProgress.resetProgress()
                 self.cancelCardLabel.text = "Click the button  to start downloading the video."
                 self.view.layoutIfNeeded()
-            }){[self]_ in
+            }){ [self] _ in
                 DispatchQueue.main.asyncAfter(deadline: .now()+5){
                     UIView.animate(withDuration: 1){[self] in
                         infoLeftConstraint.constant = width
@@ -262,7 +264,9 @@ extension VideoViewController: DownloadProgressDelegate{
     }
     
     func downloadFinishedWithFailure(error:String) {
+      
         DispatchQueue.main.async {[self] in
+            self.downloadButton.setTitle("Try again", for: .normal)
             UIView.animate(withDuration: 1,animations:{[self] in
                 infoBar.backgroundColor = UIColor(named: "error")
                 infoLabel.text = error
@@ -273,6 +277,7 @@ extension VideoViewController: DownloadProgressDelegate{
                 self.view.layoutIfNeeded()
             }){[self]_ in
                 DispatchQueue.main.asyncAfter(deadline: .now()+5){
+                   
                     UIView.animate(withDuration: 1){[self] in
                         infoLeftConstraint.constant = width
                         infoRightConstraint.constant = -width

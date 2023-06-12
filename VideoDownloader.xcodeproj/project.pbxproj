@@ -147,6 +147,17 @@
 			path = APIModels;
 			sourceTree = "<group>";
 		};
+		0482912D2A376A79007D019E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				049091932A2BE0FB00D6B693 /* HomeViewController.swift */,
+				049091B32A2CAC4200D6B693 /* VideoViewController.swift */,
+				049091942A2BE0FB00D6B693 /* HomeViewController.xib */,
+				049091B42A2CAC4200D6B693 /* VideoViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		049091532A2BDF9F00D6B693 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +181,7 @@
 		0490915E2A2BDF9F00D6B693 /* VideoDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				0482912D2A376A79007D019E /* Views */,
 				04828F112A309E23007D019E /* APIModels */,
 				04828F0E2A2E49EB007D019E /* Delegates */,
 				04828F092A2E4933007D019E /* Utils */,
@@ -183,10 +195,6 @@
 				0490916D2A2BDFA300D6B693 /* LaunchScreen.storyboard */,
 				049091702A2BDFA300D6B693 /* Info.plist */,
 				049091682A2BDF9F00D6B693 /* VideoDownloader.xcdatamodeld */,
-				049091932A2BE0FB00D6B693 /* HomeViewController.swift */,
-				049091942A2BE0FB00D6B693 /* HomeViewController.xib */,
-				049091B32A2CAC4200D6B693 /* VideoViewController.swift */,
-				049091B42A2CAC4200D6B693 /* VideoViewController.xib */,
 			);
 			path = VideoDownloader;
 			sourceTree = "<group>";
