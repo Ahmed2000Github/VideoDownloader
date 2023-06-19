@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorUI" customModule="VideoDownloader" customModuleProvider="target">
             <connections>
+                <outlet property="label" destination="tRc-tL-NnP" id="zMQ-qG-00A"/>
                 <outlet property="tryAgainButton" destination="I3D-Ti-nPL" id="JKA-U8-ajc"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
                         <constraint firstAttribute="width" constant="100" id="YuW-9v-PxM"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error was occured." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRc-tL-NnP">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error was occured." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRc-tL-NnP">
                     <rect key="frame" x="110" y="10" width="200" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="OyT-Sl-7kD"/>

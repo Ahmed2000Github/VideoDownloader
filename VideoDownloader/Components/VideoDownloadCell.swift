@@ -14,6 +14,7 @@ class VideoDownloadCell: UITableViewCell {
     @IBOutlet weak var videoUrlLabel: UILabel!
     
     var uiNavigationController: UINavigationController?
+    var isYUVideo = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,17 +22,17 @@ class VideoDownloadCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func update(viewModel:VideoFoundResponse){
         videoUrlLabel.text = viewModel.url
+        isYUVideo = viewModel.isYoutubeVideo
     }
     
     @IBAction func downloadAction(_ sender: Any) {
         let vc = VideoViewController(nibName: "VideoViewController", bundle: nil)
         vc.urlString = videoUrlLabel.text ?? ""
+        vc.isYoutubeVideo = isYUVideo
         uiNavigationController?.pushViewController(vc, animated: true)
     }
     

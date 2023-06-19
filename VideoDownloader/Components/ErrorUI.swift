@@ -11,6 +11,7 @@ import UIKit
 class ErrorUI:UIView{
     
     
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
     
     override init(frame: CGRect) {

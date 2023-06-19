@@ -51,7 +51,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-jS-2kY">
                     <rect key="frame" x="0.0" y="279" width="393" height="50"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.youtube.com/watch?v=9ZGrRB1_suw" borderStyle="roundedRect" placeholder="paste url here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-1Q-4lJ">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="paste url here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-1Q-4lJ">
                             <rect key="frame" x="10" y="0.0" width="275" height="50"/>
                             <color key="textColor" name="primary"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>

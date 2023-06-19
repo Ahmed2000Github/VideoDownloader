@@ -37,6 +37,8 @@ class HomeViewController: UIViewController {
             guard let urlString = searchTextField.text, let _ = URL(string: urlString) else{
                 errorResult.isHidden = false
                 print("url string not valid")
+                errorResult.label.text = "URL invalid."
+                loadingIndicator.isHidden = true
                 return
             }
             do{

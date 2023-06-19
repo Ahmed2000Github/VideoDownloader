@@ -39,6 +39,7 @@
 		049091B62A2CAC4200D6B693 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049091B42A2CAC4200D6B693 /* VideoViewController.xib */; };
 		049091C12A2DF2A800D6B693 /* DownloadProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049091C02A2DF2A800D6B693 /* DownloadProgressBar.swift */; };
 		049091C52A2DF87900D6B693 /* DownloadProgressBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049091C42A2DF87900D6B693 /* DownloadProgressBar.xib */; };
+		04F20F7F2A40A78600BB68F5 /* VideoDownloader.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04F20F7E2A40A78600BB68F5 /* VideoDownloader.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		049091B42A2CAC4200D6B693 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		049091C02A2DF2A800D6B693 /* DownloadProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadProgressBar.swift; sourceTree = "<group>"; };
 		049091C42A2DF87900D6B693 /* DownloadProgressBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadProgressBar.xib; sourceTree = "<group>"; };
+		04F20F7E2A40A78600BB68F5 /* VideoDownloader.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = VideoDownloader.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		049091532A2BDF9F00D6B693 = {
 			isa = PBXGroup;
 			children = (
+				04F20F7D2A40A76D00BB68F5 /* Ressources */,
 				0490915E2A2BDF9F00D6B693 /* VideoDownloader */,
 				049091782A2BDFA300D6B693 /* VideoDownloaderTests */,
 				049091822A2BDFA300D6B693 /* VideoDownloaderUITests */,
@@ -258,6 +261,14 @@
 				04828F212A30EB1F007D019E /* QualityFormatCell.xib */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		04F20F7D2A40A76D00BB68F5 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				04F20F7E2A40A78600BB68F5 /* VideoDownloader.mp4 */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +379,7 @@
 				049091B62A2CAC4200D6B693 /* VideoViewController.xib in Resources */,
 				049091C52A2DF87900D6B693 /* DownloadProgressBar.xib in Resources */,
 				049091B22A2C106400D6B693 /* VideoDownloadCell.xib in Resources */,
+				04F20F7F2A40A78600BB68F5 /* VideoDownloader.mp4 in Resources */,
 				0490916C2A2BDFA300D6B693 /* Assets.xcassets in Resources */,
 				049091962A2BE0FB00D6B693 /* HomeViewController.xib in Resources */,
 				049091AD2A2C083000D6B693 /* ErrorUI.xib in Resources */,

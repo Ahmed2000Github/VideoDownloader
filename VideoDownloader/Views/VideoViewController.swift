@@ -73,7 +73,7 @@ class VideoViewController: UIViewController {
         previewImage.layer.cornerRadius = 10
         previewImage.clipsToBounds = true
         Task{
-            if !isYoutubeVideo{
+            if isYoutubeVideo{
                 let videoYUdata = await presenter.getYoutubeVideoInformation(link: urlString)
                 avialableFormats = videoYUdata?.formats ?? [FormatInformation]()
                 selectedQualityLabel.text = avialableFormats.count == 0 ? "default": avialableFormats[0].qualityLabel
